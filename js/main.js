@@ -42,25 +42,22 @@ if(currentPage === 1){
     disabler.classList.add('disabeler')
 }
 
+
 function paginater(prev, next, array){
     if(next){
         currentPage++
        if(currentPage>1){
         disabler.classList.remove('disabeler')
        }
-       if((array.length/2)<=currentPage){
-        disablerNext.classList.add('disabeler')
-    } 
-        filterByGenre(array);
+
+       filterByGenre(array);
         
     }else if(prev){
         currentPage--
         if(currentPage === 1){
             disabler.classList.add('disabeler')
         }
-        if(Math.ceil(array.length/2)>=currentPage){
-            disablerNext.classList.add('disabeler')
-        } 
+        
         filterByGenre(array);
     }
 }

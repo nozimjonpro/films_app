@@ -21,10 +21,10 @@
     </div>
    <main class="main">
     <section class="films">
-     <div class="container p-5">
+     <div class="container container-md container-sm p-5">
        <h2 class="films__heading h2 text-center mb-4">Movies catalog</h2>
-       <div class="films__inner row">
-         <div class="films__left col-4">
+       <div class="films__inner  row justify-content-xl-center justify-content-sm-center">
+         <div class="films__left col-lg-4 col-md-10 mx-md-auto">
            <form class="films__form" autocomplete="off">
              <select class="films__select-genre mb-3 form-select" name="" id=""">
                <option value="All">All</option>
@@ -43,8 +43,8 @@
            <h3 class="films__heading-bookmark">Bookmarked movies:</h3>
            <ul class="films__bookmark-list"></ul>
          </div>
-         <div class="films__right col-8">
-           <h3 class="films__heading-result">Search results: <strong class="search-result">0</strong></h3>
+         <div class="films__right col-8 flex-lg-row justify-content-lg-center mx-sm-auto mx-md-auto">
+           <h3 class="films__heading-result mb-3 mt-3">Search results: <strong class="search-result">0</strong></h3>
            <p class="films__alert alert-primary p-3">Use the form on the left search for a movie</p>
            <ul class="films__cards-list d-flex justify-content-between mb-5 flex-wrap"></ul>
            <nav class="films__navbar d-flex justify-content-center" aria-label="Page navigation example">
@@ -76,7 +76,7 @@
    </main>
 
    <template id="films__template">
-    <li class="films__card">
+    <li class="films__card mb-4">
       <div class="card">
         <img class="films-card__image card-img-top" width="280" height="160" src="https://via.placeholder.com/280x160" alt="Card image cap">
         <div class="card-body">
@@ -85,9 +85,9 @@
             <img class="films-time__image me-2" src="./img/calendar.png" width="20" height="20" alt="time icon">
             <time class="films__time d-flex align-items-center">2018</time>
           </div>
-          <ul class="films__card-buttons d-flex justify-content-between mt-3">
-            <li class="films-card__buttons-item"><button class="films-trailer__button btn border-primary">Watch trailer</button></li>
-            <li class="films-card__buttons-item"><button class="films-info__button btn border-primary">More Info</button></li>
+          <ul class="films__card-buttons d-flex justify-content-between justify-content-sm-center mt-3 flex-wrap">
+            <li class="films-card__buttons-item mb-1"><button class="films-trailer__button btn border-primary">Watch trailer</button></li>
+            <li class="films-card__buttons-item ms-1 me-1"><button class="films-info__button btn border-primary">More Info</button></li>
             <li class="films-card__buttons-item"><button class="films-bookmark__button btn border-primary">Bookmark</button></li>
           </ul>
         </div>
