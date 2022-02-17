@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Films App</title>
+  </head>
+  <body>
+    <div class="modal__here">
+      <div class="modal__inner d-flex justify-content-between align-items-center p-4 rounded">
+        <img class="modal__image rounded" width="120" height="170" src="" alt="">
+        <div class="modal__info ms-4 text-center">
+          <h4 class="modal__heading ">Avengers</h4>
+          <p class="modal__overview">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, distinctio.</p>
+          <ul class="modal__genres">horror, thriller, darama</ul>
+        </div>
+      </div>
+    </div>
+   <main class="main">
+    <section class="films">
+     <div class="container p-5">
+       <h2 class="films__heading h2 text-center mb-4">Movies catalog</h2>
+       <div class="films__inner row">
+         <div class="films__left col-4">
+           <form class="films__form" autocomplete="off">
+             <select class="films__select-genre mb-3 form-select" name="" id=""">
+               <option value="All">All</option>
+             </select>
+            <input  class="films__input-text mb-3 form-control" placeholder="Film's title..." type="text">
+            <input  class="films__input-number mb-3 form-control" placeholder="Film's number..." type="number">
+            <select class="films__select-rate form-select mb-3" name="" id="">
+              <option value="" hidden>Rating (high to low)</option>
+              <option value="a_z">A_Z</option>
+              <option value="z_a">Z_A</option>
+              <option value="old_new">Old_New</option>
+              <option value="new_old">New_Old</option>
+            </select>
+            <button class="films-search__button btn w-100 bg-primary text-light mb-4" type="submit">Search</button>
+           </form>
+           <h3 class="films__heading-bookmark">Bookmarked movies:</h3>
+           <ul class="films__bookmark-list"></ul>
+         </div>
+         <div class="films__right col-8">
+           <h3 class="films__heading-result">Search results: <strong class="search-result">0</strong></h3>
+           <p class="films__alert alert-primary p-3">Use the form on the left search for a movie</p>
+           <ul class="films__cards-list d-flex justify-content-between mb-5 flex-wrap"></ul>
+           <nav class="films__navbar d-flex justify-content-center" aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <button class="films__slider-prev page-link"  aria-label="Previous">
+                  <span class="films__dis"></span>
+                  <span class="films__slider-prev" aria-hidden="true">&laquo;</span>
+                  <span class="films__slider-prev sr-only">Previous</span>
+                </button>
+              </li>
+              <li class="page-item"><button class="page-link" href="#">1</button></li>
+              <li class="page-item"><button class="page-link" href="#">2</button></li>
+              <li class="page-item"><button class="page-link" href="#">3</button></li>
+              <li class="page-item">
+                <button class="films__slider-next page-link"  aria-label="Next">
+                  <span class="films__dis--next"></span>
+                  <span class="films__slider-next sr-only">Next</span>
+                  <span class="films__slider-next" aria-hidden="true">&raquo;</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          
+         </div>
+       </div>
+     </div>
+    </section>
+   </main>
+
+   <template id="films__template">
+    <li class="films__card">
+      <div class="card">
+        <img class="films-card__image card-img-top" width="280" height="160" src="https://via.placeholder.com/280x160" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <div class="times d-flex">
+            <img class="films-time__image me-2" src="./img/calendar.png" width="20" height="20" alt="time icon">
+            <time class="films__time d-flex align-items-center">2018</time>
+          </div>
+          <ul class="films__card-buttons d-flex justify-content-between mt-3">
+            <li class="films-card__buttons-item"><button class="films-trailer__button btn border-primary">Watch trailer</button></li>
+            <li class="films-card__buttons-item"><button class="films-info__button btn border-primary">More Info</button></li>
+            <li class="films-card__buttons-item"><button class="films-bookmark__button btn border-primary">Bookmark</button></li>
+          </ul>
+        </div>
+      </div>
+     </li>
+   </template>
+  
+  <!-- Modal -->
+
+
+  <template id="modal__template">
+    <div class="modal__inner d-flex justify-content-between align-items-center p-4 rounded">
+      <img class="modal__image rounded" width="120" height="170" src="" alt="">
+      <div class="modal__info ms-4 text-center">
+        <h4 class="modal__heading ">Avengers</h4>
+        <p class="modal__overview">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, distinctio.</p>
+        <ul class="modal__genres">horror, thriller, darama</ul>
+      </div>
+      <button class="modal__close" type="button">&times;</button>
+    </div>
+  </template>
+  <script src="js/films.js"></script>
+  <script src="js/utils.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
